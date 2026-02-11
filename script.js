@@ -86,6 +86,68 @@
 })();
 
 
+// ===== Typewriter Effect =====
+(function initTypewriter() {
+    const lines = [
+        { id: 'type-line-1', text: 'Intelligent' },
+        { id: 'type-line-2', text: 'Systems' },
+        { id: 'type-line-3', text: 'Workshop' }
+    ];
+    const cursor = document.getElementById('typewriter-cursor');
+
+    if (!cursor) return;
+
+    const CHAR_SPEED = 90;       // ms per character
+    const LINE_PAUSE = 300;      // pause between lines
+    const START_DELAY = 600;     // initial delay before typing starts
+
+    let currentLine = 0;
+    let currentChar = 0;
+
+    function positionCursor(lineEl) {
+        // Move cursor next to the current line's text
+        const lineParent = lineEl.parentElement;
+        const rect = lineEl.getBoundingClientRect();
+        const titleRect = document.getElementById('hero-title').getBoundingClientRect();
+        cursor.style.top = (lineParent.offsetTop) + 'px';
+        cursor.style.left = (lineEl.offsetWidth) + 'px';
+    }
+
+    function typeChar() {
+        if (currentLine >= lines.length) {
+            // Typing complete — fade cursor and add shimmer
+            setTimeout(() => {
+                cursor.classList.add('hide');
+                // Add shimmer to "Systems" line
+                const accentLine = document.getElementById('type-line-2');
+                if (accentLine) {
+                    accentLine.parentElement.classList.add('shimmer-active');
+                }
+            }, 1000);
+            return;
+        }
+
+        const lineData = lines[currentLine];
+        const el = document.getElementById(lineData.id);
+
+        if (currentChar <= lineData.text.length) {
+            el.textContent = lineData.text.substring(0, currentChar);
+            positionCursor(el);
+            currentChar++;
+            setTimeout(typeChar, CHAR_SPEED);
+        } else {
+            // Move to next line
+            currentLine++;
+            currentChar = 0;
+            setTimeout(typeChar, LINE_PAUSE);
+        }
+    }
+
+    // Start typing after a short delay
+    setTimeout(typeChar, START_DELAY);
+})();
+
+
 // ===== Navbar Scroll Effect =====
 (function initNavbar() {
     const navbar = document.getElementById('navbar');
@@ -197,63 +259,47 @@
 })();
 
 
-// ===== Registration Form =====
-(function initForm() {
-    const form = document.getElementById('registration-form');
-    const successMessage = document.getElementById('success-message');
-    const submitBtn = document.getElementById('submit-btn');
+// ===== Countdown Timer =====
+(function initCountdown() {
+    // Workshop date: 23rd February 2026, 12:00 PM IST
+    const workshopDate = new Date('2026-02-23T12:00:00+05:30').getTime();
 
-    if (!form) return;
+    const daysEl = document.getElementById('cd-days');
+    const hoursEl = document.getElementById('cd-hours');
+    const minutesEl = document.getElementById('cd-minutes');
+    const secondsEl = document.getElementById('cd-seconds');
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
+    if (!daysEl) return;
 
-        // Simple validation
-        const inputs = form.querySelectorAll('[required]');
-        let valid = true;
+    function padZero(num) {
+        return num < 10 ? '0' + num : num;
+    }
 
-        inputs.forEach(input => {
-            if (!input.value.trim()) {
-                valid = false;
-                input.style.borderColor = '#ff4d6a';
-                input.addEventListener('focus', () => {
-                    input.style.borderColor = '';
-                }, { once: true });
-            }
-        });
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const diff = workshopDate - now;
 
-        if (!valid) return;
+        if (diff <= 0) {
+            daysEl.textContent = '00';
+            hoursEl.textContent = '00';
+            minutesEl.textContent = '00';
+            secondsEl.textContent = '00';
+            return;
+        }
 
-        // Simulate submission
-        submitBtn.innerHTML = '<span>Registering...</span>';
-        submitBtn.disabled = true;
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-        setTimeout(() => {
-            form.style.display = 'none';
-            successMessage.style.display = 'block';
+        daysEl.textContent = padZero(days);
+        hoursEl.textContent = padZero(hours);
+        minutesEl.textContent = padZero(minutes);
+        secondsEl.textContent = padZero(seconds);
+    }
 
-            // Animate success message
-            successMessage.style.opacity = '0';
-            successMessage.style.transform = 'translateY(20px)';
-            successMessage.style.transition = 'all 0.5s ease';
-
-            requestAnimationFrame(() => {
-                successMessage.style.opacity = '1';
-                successMessage.style.transform = 'translateY(0)';
-            });
-        }, 1500);
-    });
-
-    // Input focus effects
-    const formInputs = form.querySelectorAll('input, select');
-    formInputs.forEach(input => {
-        input.addEventListener('focus', () => {
-            input.parentElement.classList.add('focused');
-        });
-        input.addEventListener('blur', () => {
-            input.parentElement.classList.remove('focused');
-        });
-    });
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
 })();
 
 
