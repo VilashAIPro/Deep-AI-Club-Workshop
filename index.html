@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Intelligent Systems Workshop - Building Intelligent Applications using APIs and AI Agents. Conducted by Deep AI Club, Department of AI & Data Science, Prathyusha Engineering College on 23rd February 2026.">
+    <meta name="keywords"
+        content="Intelligent Systems, Workshop, AI Agents, APIs, Deep AI Club, Prathyusha Engineering College, AI & Data Science">
+    <meta name="author" content="Deep AI Club - Prathyusha Engineering College">
+    <title>Intelligent Systems Workshop | Deep AI Club | Prathyusha Engineering College</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon">⚡</span>
+                <span class="logo-text">ISW<span class="logo-year">'25</span></span>
+            </a>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#speaker">Speaker</a></li>
+                <li><a href="#vision">Vision</a></li>
+                <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="#agenda">Agenda</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="https://forms.gle/U6cSAzm3v7XefRzMA" target="_blank" rel="noopener noreferrer"
+                        class="nav-cta">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-bg-effects">
+            <div class="hero-glow hero-glow-1"></div>
+            <div class="hero-glow hero-glow-2"></div>
+            <div class="hero-glow hero-glow-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" data-animate="fade-down">
+                <span class="badge-dot"></span>
+                Deep AI Club &bull; Department of AI &amp; Data Science
+            </div>
+            <h1 class="hero-title" data-animate="fade-up">
+                <span class="title-line">Intelligent</span>
+                <span class="title-line title-accent">Systems</span>
+                <span class="title-line">Workshop</span>
+            </h1>
+            <p class="hero-subtitle" data-animate="fade-up" data-delay="200">
+                Building Intelligent Applications using APIs and AI Agents
+            </p>
+            <div class="hero-info" data-animate="fade-up" data-delay="400">
+                <div class="hero-info-item">
+                    <span class="info-icon">📅</span>
+                    <span>23rd February 2026</span>
+                </div>
+                <div class="hero-info-item">
+                    <span class="info-icon">🕐</span>
+                    <span>12:00 PM – 4:00 PM</span>
+                </div>
+                <div class="hero-info-item">
+                    <span class="info-icon">📍</span>
+                    <span>Prathyusha Engineering College</span>
+                </div>
+            </div>
+            <div class="hero-actions" data-animate="fade-up" data-delay="600">
+                <a href="https://forms.gle/U6cSAzm3v7XefRzMA" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">
+                    <span>Register Now</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    <span>Learn More</span>
+                </a>
+            </div>
+            <div class="hero-college" data-animate="fade-up" data-delay="800">
+                <p>Prathyusha Engineering College</p>
+                <span>An Autonomous Institution</span>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-dot"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">About</span>
+                <h2 class="section-title">About the <span class="text-accent">Workshop</span></h2>
+                <p class="section-subtitle">Discover the world of Intelligent Systems and learn to build the future</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card" data-animate="fade-up" data-delay="100">
+                    <div class="about-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>Intelligent Systems</h3>
+                    <p>Intelligent Systems are advanced computing platforms that perceive their environment, reason
+                        about data, learn from experience, and make autonomous decisions. They form the backbone of
+                        modern AI applications — from smart assistants to autonomous vehicles — enabling machines to
+                        perform tasks that traditionally required human intelligence.</p>
+                </div>
+                <div class="about-card" data-animate="fade-up" data-delay="200">
+                    <div class="about-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                            <polyline points="13 2 13 9 20 9" />
+                            <line x1="10" y1="13" x2="10" y2="17" />
+                            <line x1="14" y1="13" x2="14" y2="17" />
+                        </svg>
+                    </div>
+                    <h3>APIs (Application Programming Interfaces)</h3>
+                    <p>APIs are the digital bridges that allow different software systems to communicate seamlessly.
+                        They enable developers to integrate powerful services — such as natural language processing,
+                        computer vision, and data analytics — into their own applications without building everything
+                        from scratch, dramatically accelerating innovation and development.</p>
+                </div>
+                <div class="about-card" data-animate="fade-up" data-delay="300">
+                    <div class="about-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                        </svg>
+                    </div>
+                    <h3>AI Agents</h3>
+                    <p>AI Agents are autonomous software entities that can perceive, reason, plan, and act to achieve
+                        specific goals. Unlike traditional programs, AI Agents can adapt their behavior based on
+                        context, interact with external tools and APIs, and chain multiple reasoning steps together —
+                        making them the next frontier in building truly intelligent applications.</p>
+                </div>
+                <div class="about-card about-card-highlight" data-animate="fade-up" data-delay="400">
+                    <div class="about-card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3>Why This Workshop?</h3>
+                    <p>This hands-on workshop bridges the gap between theoretical knowledge and practical
+                        implementation. You will gain real-world experience in building intelligent applications by
+                        integrating APIs with AI Agents — skills that are in massive demand across the tech industry.
+                        Whether you're a beginner or an intermediate developer, this workshop will elevate your
+                        understanding of how modern AI systems work and how to build them.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaker Section -->
+    <section id="speaker">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Speaker</span>
+                <h2 class="section-title">Meet Our <span class="text-accent">Speaker</span></h2>
+                <p class="section-subtitle">The expert guiding you through this workshop</p>
+            </div>
+            <div class="speaker-card" data-animate="fade-up" data-delay="200">
+                <div class="speaker-image-wrapper">
+                    <div class="speaker-image-ring"></div>
+                    <img src="speaker.png" alt="Mr. Vilash Kumar Reddy - Workshop Speaker" class="speaker-image">
+                </div>
+                <div class="speaker-info">
+                    <h3 class="speaker-name">Mr. Vilash Kumar Reddy</h3>
+                    <div class="speaker-title-badges">
+                        <span class="speaker-badge">Intelligent Systems</span>
+                        <span class="speaker-badge">AI Automation</span>
+                        <span class="speaker-badge">Robotics</span>
+                    </div>
+                    <p class="speaker-bio">
+                        Mr. Vilash Kumar Reddy is an enthusiastic innovator and technology expert
+                        specializing in <strong>Intelligent Systems</strong>, <strong>AI-based automation</strong>, and
+                        <strong>Robotics</strong>.
+                        He has led multiple successful projects including autonomous systems,
+                        healthcare data platforms, and AI-driven solutions.
+                        In this workshop, he will guide participants through practical
+                        implementation of Intelligent Systems with real-world applications.
+                    </p>
+                    <div class="speaker-highlights">
+                        <div class="speaker-highlight-item">
+                            <span class="highlight-icon">🤖</span>
+                            <span>Autonomous Systems</span>
+                        </div>
+                        <div class="speaker-highlight-item">
+                            <span class="highlight-icon">🏥</span>
+                            <span>Healthcare AI</span>
+                        </div>
+                        <div class="speaker-highlight-item">
+                            <span class="highlight-icon">⚙️</span>
+                            <span>AI-Driven Solutions</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section id="vision">
+        <div class="container">
+            <div class="vision-wrapper" data-animate="fade-up">
+                <div class="vision-bg-pattern"></div>
+                <span class="section-tag">Our Vision</span>
+                <h2 class="vision-title">Empowering the Next Generation of <span class="text-accent">Innovators</span>
+                </h2>
+                <p class="vision-text">
+                    We envision a community of students who don't just learn about AI — but actively
+                    <strong>build</strong> with it.
+                    This workshop is designed to empower you with the practical skills and creative confidence to
+                    develop
+                    intelligent applications that solve real-world problems. By mastering APIs and AI Agents, you'll be
+                    equipped to create future-ready solutions — from smart automation tools to context-aware assistants
+                    —
+                    positioning yourself at the forefront of the AI revolution. The future belongs to builders, and
+                    this is where your journey begins.
+                </p>
+                <div class="vision-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="4">0</span>
+                        <span class="stat-label">Hours of Learning</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-count="6">0</span>
+                        <span class="stat-label">Departments</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Possibilities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Eligibility Section -->
+    <section id="eligibility">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Who Can Attend</span>
+                <h2 class="section-title">Eligibility <span class="text-accent">Criteria</span></h2>
+                <p class="section-subtitle">Here's who is eligible to attend this workshop</p>
+            </div>
+            <div class="eligibility-grid">
+                <div class="eligibility-card" data-animate="fade-up" data-delay="100">
+                    <div class="eligibility-icon">🎓</div>
+                    <h3>UG Students</h3>
+                    <p>Open to all undergraduate students of <strong>I Year, II Year, and III Year</strong>.</p>
+                </div>
+                <div class="eligibility-card" data-animate="fade-up" data-delay="200">
+                    <div class="eligibility-icon">💻</div>
+                    <h3>Bring Your Laptop</h3>
+                    <p>Students must bring their own laptop for hands-on coding sessions during the workshop.</p>
+                </div>
+                <div class="eligibility-card" data-animate="fade-up" data-delay="300">
+                    <div class="eligibility-icon">🏛️</div>
+                    <h3>Eligible Departments</h3>
+                    <div class="dept-tags">
+                        <span class="dept-tag">AI &amp; DS</span>
+                        <span class="dept-tag">AI &amp; ML</span>
+                        <span class="dept-tag">Cyber Security</span>
+                        <span class="dept-tag">CSBS</span>
+                        <span class="dept-tag">CSE</span>
+                        <span class="dept-tag">IT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Agenda Section -->
+    <section id="agenda">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Schedule</span>
+                <h2 class="section-title">Workshop <span class="text-accent">Agenda</span></h2>
+                <p class="section-subtitle">A structured timeline of everything we'll cover</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-animate="fade-up" data-delay="50">
+                    <div class="timeline-time">12:00 – 12:15</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>Introduction &amp; Interaction</h3>
+                        <p>Welcome, introductions, and icebreaker activities to kick off the workshop.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fade-up" data-delay="100">
+                    <div class="timeline-time">12:15 – 12:30</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>Workshop Overview</h3>
+                        <p>An overview of the workshop objectives, outcomes, and what to expect.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fade-up" data-delay="150">
+                    <div class="timeline-time">12:30 – 12:50</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>Intelligent Systems Basics</h3>
+                        <p>Fundamentals of intelligent systems, their architecture, and real-world applications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item timeline-break" data-animate="fade-up" data-delay="200">
+                    <div class="timeline-time">12:50 – 1:30</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot dot-break"></div>
+                        <h3>🍽️ Lunch Break</h3>
+                        <p>Refuel and recharge for the afternoon sessions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fade-up" data-delay="250">
+                    <div class="timeline-time">1:30 – 2:00</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>API Fundamentals</h3>
+                        <p>Understanding APIs, RESTful services, and how they power intelligent applications.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fade-up" data-delay="300">
+                    <div class="timeline-time">2:00 – 2:25</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>Workspace Setup</h3>
+                        <p>Setting up development environment and tools required for the hands-on session.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fade-up" data-delay="350">
+                    <div class="timeline-time">2:25 – 2:55</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>AI Agents</h3>
+                        <p>Deep dive into AI Agents — how they think, plan, and act autonomously.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fade-up" data-delay="400">
+                    <div class="timeline-time">2:55 – 3:25</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>Agent-API Integration</h3>
+                        <p>Connecting AI Agents with APIs to build powerful, integrated intelligent systems.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fade-up" data-delay="450">
+                    <div class="timeline-time">3:25 – 3:45</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>🛠️ Mini Hands-on</h3>
+                        <p>Build a mini intelligent application by integrating APIs with AI Agents in real-time.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-animate="fade-up" data-delay="500">
+                    <div class="timeline-time">3:45 – 4:00</div>
+                    <div class="timeline-content">
+                        <div class="timeline-dot"></div>
+                        <h3>Q&amp;A and Closing</h3>
+                        <p>Open floor for questions, feedback, certificates, and closing remarks.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Organizing Team Section -->
+    <section id="team">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">Our Team</span>
+                <h2 class="section-title">Organizing <span class="text-accent">Team</span></h2>
+                <p class="section-subtitle">The people behind this workshop</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-category" data-animate="fade-up" data-delay="100">
+                    <h3 class="team-role">Faculty In-charge</h3>
+                    <div class="team-card team-card-faculty">
+                        <div class="team-avatar">
+                            <span>SG</span>
+                        </div>
+                        <div class="team-info">
+                            <h4>Ms. Siva Ganga</h4>
+                            <p>Faculty In-charge, Deep AI Club</p>
+                            <span class="team-dept">Department of AI &amp; Data Science</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-category" data-animate="fade-up" data-delay="200">
+                    <h3 class="team-role">Student Coordinators</h3>
+                    <div class="team-cards-row">
+                        <div class="team-card">
+                            <div class="team-avatar team-avatar-img">
+                                <img src="vilash.png" alt="Kaku Vilash Kumar Reddy">
+                            </div>
+                            <div class="team-info">
+                                <h4>Kaku Vilash Kumar Reddy</h4>
+                                <p>Student Coordinator</p>
+                                <span class="team-dept">Deep AI Club</span>
+                            </div>
+                        </div>
+                        <div class="team-card">
+                            <div class="team-avatar">
+                                <span>BK</span>
+                            </div>
+                            <div class="team-info">
+                                <h4>B. Kusuma</h4>
+                                <p>Student Coordinator</p>
+                                <span class="team-dept">Deep AI Club</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register">
+        <div class="container">
+            <div class="register-cta-wrapper" data-animate="fade-up">
+                <div class="register-cta-bg"></div>
+                <span class="section-tag">Join Us</span>
+                <h2 class="section-title">Ready to <span class="text-accent">Register?</span></h2>
+                <p class="register-cta-text">Secure your spot in the Intelligent Systems Workshop.<br>Click below to
+                    fill out the registration form.</p>
+                <a href="https://forms.gle/U6cSAzm3v7XefRzMA" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary btn-register-cta">
+                    <span>Register Now</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                </a>
+                <p class="register-cta-note">📋 You will be redirected to a Google Form</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-icon">⚡</span>
+                    <h3>Intelligent Systems Workshop</h3>
+                    <p>Conducted by Deep AI Club</p>
+                    <p>Department of Artificial Intelligence &amp; Data Science</p>
+                    <p><strong>Prathyusha Engineering College</strong></p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About</a>
+                    <a href="#agenda">Agenda</a>
+                    <a href="#eligibility">Eligibility</a>
+                    <a href="https://forms.gle/U6cSAzm3v7XefRzMA" target="_blank" rel="noopener noreferrer">Register</a>
+                </div>
+                <div class="footer-contact">
+                    <h4>Event Details</h4>
+                    <p>📅 23rd February 2026</p>
+                    <p>🕐 12:00 PM – 4:00 PM</p>
+                    <p>📍 Prathyusha Engineering College</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Deep AI Club — Prathyusha Engineering College. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
