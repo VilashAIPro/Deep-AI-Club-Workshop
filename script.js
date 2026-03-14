@@ -261,8 +261,8 @@
 
 // ===== Countdown Timer =====
 (function initCountdown() {
-    // Workshop date: 23rd February 2026, 12:00 PM IST
-    const workshopDate = new Date('2026-02-23T12:00:00+05:30').getTime();
+    // Workshop date: 17th March 2026, 12:00 PM IST
+    const workshopDate = new Date('2026-03-17T12:00:00+05:30').getTime();
 
     const daysEl = document.getElementById('cd-days');
     const hoursEl = document.getElementById('cd-hours');
