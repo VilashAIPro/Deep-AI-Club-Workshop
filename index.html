@@ -225,15 +225,38 @@
                 
                 <div class="speaker-card-new" style="text-align: center; width: 200px;">
                     <style>
-                        .speaker-card-new { transition: transform 0.3s; }
+                        @keyframes float-speaker {
+                            0% { transform: translateY(0px); }
+                            50% { transform: translateY(-12px); box-shadow: 0 15px 30px rgba(245, 166, 35, 0.1); border-radius: 20px; }
+                            100% { transform: translateY(0px); }
+                        }
+                        .speaker-card-new { 
+                            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+                            animation: float-speaker 5s ease-in-out infinite;
+                            padding: 15px;
+                        }
+                        .speaker-card-new:nth-child(2) { animation-delay: 1s; }
+                        .speaker-card-new:nth-child(3) { animation-delay: 2s; }
+                        .speaker-card-new:nth-child(4) { animation-delay: 1.5s; }
+                        .speaker-card-new:nth-child(5) { animation-delay: 0.5s; }
+                        
                         .speaker-img-new { 
                             width: 160px; height: 160px; border-radius: 50%; margin: 0 auto 20px; 
                             border: 4px solid #f5a623; display: flex; align-items: center; justify-content: center; 
                             font-size: 3rem; font-family: var(--ff-heading); font-weight: 800; color: rgba(255,255,255,0.7); 
-                            background: rgba(255,255,255,0.05); transition: all 0.4s ease; object-fit: cover;
+                            background: rgba(255,255,255,0.05); transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); object-fit: cover;
+                            box-shadow: 0 0 20px rgba(245, 166, 35, 0.2);
                         }
-                        .speaker-card-new:hover .speaker-img-new { box-shadow: 0 0 30px rgba(255, 77, 106, 0.8); transform: scale(1.05); border-color: #ff4d6a; }
-                        .speaker-card-new h3 { font-family: var(--ff-heading); font-size: 1.1rem; margin-bottom: 8px; }
+                        .speaker-card-new:hover .speaker-img-new { 
+                            box-shadow: 0 0 45px rgba(255, 77, 106, 0.9); 
+                            transform: scale(1.12) rotate(-6deg); 
+                            border-color: #ff4d6a; 
+                        }
+                        .speaker-card-new h3 { 
+                            font-family: var(--ff-heading); font-size: 1.1rem; margin-bottom: 8px;
+                            transition: color 0.3s;
+                        }
+                        .speaker-card-new:hover h3 { color: #f5a623; }
                         .speaker-card-new p { color: var(--clr-text-secondary); font-size: 0.85rem; }
                     </style>
                     <img class="speaker-img-new" src="speaker.png" alt="Kaku Vilash Kumar Reddy">

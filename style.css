@@ -521,6 +521,12 @@ body {
     flex-wrap: wrap;
 }
 
+@keyframes pulse-glow-btn {
+    0% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0.5); }
+    70% { box-shadow: 0 0 0 20px rgba(245, 166, 35, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0); }
+}
+
 /* ===== Buttons ===== */
 .btn {
     display: inline-flex;
@@ -543,11 +549,13 @@ body {
     background: var(--clr-accent-gradient);
     color: #0a0a0f;
     box-shadow: 0 4px 20px rgba(245, 166, 35, 0.3);
+    animation: pulse-glow-btn 2.5s infinite;
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 30px rgba(245, 166, 35, 0.4);
+    animation: none;
 }
 
 .btn-primary:active {
@@ -804,6 +812,12 @@ body {
     gap: 24px;
 }
 
+@keyframes float-card {
+    0% { transform: translateY(0); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); }
+    50% { transform: translateY(-8px); box-shadow: 0 12px 40px rgba(245, 166, 35, 0.08); }
+    100% { transform: translateY(0); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); }
+}
+
 .about-card {
     background: var(--clr-bg-card);
     border: 1px solid var(--clr-border);
@@ -812,6 +826,11 @@ body {
     transition: all var(--transition-medium);
     position: relative;
     overflow: hidden;
+    animation: float-card 6s ease-in-out infinite;
+}
+
+.about-card:nth-child(even) {
+    animation-delay: -3s;
 }
 
 .about-card::before {
